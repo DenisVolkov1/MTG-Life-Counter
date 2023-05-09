@@ -5,9 +5,9 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.mygdx.game.MTGLifeCounter;
 
-public class ManagerScreen {
+public class ManagerScreens {
 
-    private ManagerScreen() {}
+    private ManagerScreens() {}
 
     public enum Screens {
         LIFE_COUNTER_SCREEN, HISTORY_SCREEN, LOADING_SCREEN;

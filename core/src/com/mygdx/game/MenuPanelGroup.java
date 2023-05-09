@@ -1,13 +1,12 @@
 package com.mygdx.game;
 
 import static com.mygdx.game.ManagerResources.*;
-import static com.mygdx.game.screens.ManagerScreen.Screens.HISTORY_SCREEN;
+import static com.mygdx.game.screens.ManagerScreens.Screens.HISTORY_SCREEN;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.ui.Container;
 import com.badlogic.gdx.scenes.scene2d.ui.HorizontalGroup;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
@@ -15,7 +14,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.ui.VerticalGroup;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
-import com.mygdx.game.screens.ManagerScreen;
+import com.mygdx.game.screens.ManagerScreens;
 
 public class MenuPanelGroup extends HorizontalGroup {
    final static float partY = Gdx.graphics.getHeight()/120F;
@@ -63,7 +62,7 @@ public class MenuPanelGroup extends HorizontalGroup {
                panelCountPlayer2.saveChangeLife();
                game.clearStage();
                game.getScreen().dispose();
-               game.setScreen(ManagerScreen.stepOnScreen(HISTORY_SCREEN, game));
+               game.setScreen(ManagerScreens.stepOnScreen(HISTORY_SCREEN, game));
            }
        });
         // RESTART LIFE BUTTON CLICK //

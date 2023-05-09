@@ -1,14 +1,10 @@
 package com.mygdx.game;
 
 
-import static com.mygdx.game.ManagerResources.ATLAS_PLUS_MINUS;
 import static com.mygdx.game.ManagerResources.ATLAS_RESTART;
-import static com.mygdx.game.ManagerResources.ICON_HISTORY;
-import static com.mygdx.game.ManagerResources.MY_FONT;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -16,15 +12,14 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Array;
 import com.mygdx.game.animation.AnimationImage;
 import com.mygdx.game.animation.RandomAnimationFromMassive;
-import com.mygdx.game.screens.HistoryScreen;
 import com.mygdx.game.util.HistoryScreenInformation;
+import com.mygdx.game.util.Util;
 
 public class MainCountPanel extends Group {
 
@@ -41,7 +36,8 @@ public class MainCountPanel extends Group {
     private final BitmapFont myFont;
     private final TextButton buttonAddLife;
     private final TextButton buttonSubtractLife;
-    private final Label.LabelStyle label1Style;
+    private final Label.LabelStyle label1Style_LifeInAction;
+    private final Label.LabelStyle label1Style_Life;
     final Label labelLife;
 
     final Label labelLifeInAction;
@@ -55,19 +51,23 @@ public class MainCountPanel extends Group {
         thisObject = this;
         this.player = player;
 
-        label1Style = new Label.LabelStyle();
-        myFont = new BitmapFont(Gdx.files.internal("BimapFont/MyBitmapFont.fnt"));
-        label1Style.font = myFont;
 
-        labelLife = new Label(getLiveCount() ,label1Style);
-        labelLifeInAction = new Label("0",label1Style);
+        label1Style_LifeInAction = new Label.LabelStyle();
+        myFont = new BitmapFont(Gdx.files.internal("BimapFont/MyBitmapFont.fnt"));
+        label1Style_LifeInAction.font = myFont;
+
+        label1Style_Life = new Label.LabelStyle();
+        label1Style_Life.font = myFont;
+
+        labelLife = new Label(getLiveCount() ,label1Style_Life);
+        labelLifeInAction = new Label("0",label1Style_LifeInAction);
         //shift after saved life count
         this.shiftLifeLabel(Integer.parseInt(getLiveCount()));
 
         TextureAtlas textureAtlas_restart = ManagerResources.getInstance().getResource(ATLAS_RESTART);
         Array<TextureAtlas.AtlasRegion> textureRegion = textureAtlas_restart.findRegions("restart1");
-        Animation<TextureRegion> animation = new Animation<TextureRegion>(1F/35F,textureRegion,Animation.PlayMode.NORMAL);
-        anim_restart = new AnimationImage(0.4F, animation, thisObject);
+        Animation<TextureRegion> animation = new Animation<TextureRegion>(1F/45F,textureRegion,Animation.PlayMode.NORMAL);
+        anim_restart = new AnimationImage(0.30F, animation, thisObject);
         anim_restart.addToY(3*partY);
         anim_restart.addToX(4*partX);
 
@@ -88,7 +88,7 @@ public class MainCountPanel extends Group {
 
         anim_health= new RandomAnimationFromMassive("health",10,textureAtlas_heal,0.5F,1F/30F,thisObject);
         anim_health.addToY(3*partY);
-        anim_health.addToX(4*partX);
+        anim_health.addToX(4.1F*partX);
         anim_damage = new RandomAnimationFromMassive("damage",10,textureAtlas_damage,0.5F,1F/30F,thisObject);
         anim_add_button= new AnimationImage(0.4F,1F/30F,textureAtlas_plusMinus,"plus",thisObject);
         anim_add_button.addToX(partX*27);
@@ -230,7 +230,6 @@ public class MainCountPanel extends Group {
 
     float fontScalePlus = 1;
     float fontScaleMinus = 1;
-    float red = 1F;
     boolean isScalePlus=false;
     boolean isScaleMinus =false;
 
@@ -238,17 +237,24 @@ public class MainCountPanel extends Group {
     private void animScaleLife() {
 
         if(isScalePlus) {
-            if (fontScalePlus >= 1.1F) { fontScalePlus = 1F; isScalePlus=false;}
-            else fontScalePlus += 0.018F;
-                labelLife.setFontScale(fontScalePlus, fontScalePlus);
+            if (fontScalePlus >= 1.1F) {
+                fontScalePlus = 1F;
+                isScalePlus = false;
+                label1Style_Life.fontColor = Util.CONSTANT_COLOR;
+            } else {
+                fontScalePlus += 0.018F;
+                label1Style_Life.fontColor = Util.PLUS_COLOR;
+            }
+            labelLife.setFontScale(fontScalePlus, fontScalePlus);
         }
         if(isScaleMinus) {
             if (fontScaleMinus <= 0.9F) {
                 fontScaleMinus = 1F;
                 isScaleMinus =false;
-                red = 1F;
+                label1Style_Life.fontColor = Util.CONSTANT_COLOR;
             } else {
                 fontScaleMinus -= 0.018F;
+                label1Style_Life.fontColor = Util.MINUS_COLOR;
             }
             labelLife.setFontScale(fontScaleMinus, fontScaleMinus);
         }

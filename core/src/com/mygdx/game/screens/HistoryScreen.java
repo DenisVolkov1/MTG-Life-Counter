@@ -5,14 +5,12 @@ import static com.mygdx.game.ManagerResources.BACKGROUND;
 import static com.mygdx.game.ManagerResources.HISTORY_ROW_BACKGROUND;
 import static com.mygdx.game.ManagerResources.ICON_BACK_HISTORY;
 import static com.mygdx.game.ManagerResources.ICON_BACK_HISTORY_HOVER;
-import static com.mygdx.game.ManagerResources.ICON_HISTORY;
-import static com.mygdx.game.ManagerResources.ICON_HISTORY_HOVER;
 import static com.mygdx.game.ManagerResources.MY_FONT;
-import static com.mygdx.game.screens.ManagerScreen.Screens.*;
+import static com.mygdx.game.screens.ManagerScreens.Screens.*;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ScreenAdapter;
-import com.badlogic.gdx.assets.AssetDescriptor;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -32,6 +30,7 @@ import com.mygdx.game.MTGLifeCounter;
 import com.mygdx.game.ManagerResources;
 import com.mygdx.game.Players;
 import com.mygdx.game.util.HistoryScreenInformation;
+import com.mygdx.game.util.Util;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -71,8 +70,6 @@ public class HistoryScreen extends ScreenAdapter implements GetScreenEnum {
         stage = game.stage;
         myFont = ManagerResources.getInstance().getResource(MY_FONT);
         myFont.getData().setScale(0.3F, 0.3F);
-        labelStyle = new Label.LabelStyle();
-        labelStyle.font = myFont;
 
         tableContainer = new Container<Table>();
         scrollPane = new ScrollPane(tableContainer);
@@ -109,7 +106,7 @@ public class HistoryScreen extends ScreenAdapter implements GetScreenEnum {
             public void clicked(InputEvent event, float x, float y) {
                 game.clearStage();
                 game.getScreen().dispose();
-                game.setScreen(ManagerScreen.stepOnScreen(LIFE_COUNTER_SCREEN, game));
+                game.setScreen(ManagerScreens.stepOnScreen(LIFE_COUNTER_SCREEN, game));
             }
         });
 
@@ -118,19 +115,21 @@ public class HistoryScreen extends ScreenAdapter implements GetScreenEnum {
     }
 
     @Override
-    public ManagerScreen.Screens getScreenEnum() {
+    public ManagerScreens.Screens getScreenEnum() {
         return HISTORY_SCREEN;
     }
 
     private class RowActor extends Group {
 
         public RowActor(float width, String text, int align) {
+            labelStyle = new Label.LabelStyle();
+            labelStyle.font = myFont;
             Label nameLabel = new Label(text, labelStyle);
             nameLabel.setY(-4);
             float shift = 0;
 
             if (align == Align.right) {
-                if (text.length() == 4) {
+                if (text.length() == 3) {
                     if (text.contains("+")) {
                         shift = widthContainer - partX * 12;
                     }
@@ -145,6 +144,9 @@ public class HistoryScreen extends ScreenAdapter implements GetScreenEnum {
                     }
                 }
             }
+            if(text.contains("+")) labelStyle.fontColor = Util.PLUS_COLOR;
+            else if(text.contains("-")) labelStyle.fontColor = Util.MINUS_COLOR;
+
             nameLabel.setX(shift);
 
             Image background = new Image(history_row_background);

@@ -24,7 +24,7 @@ public class LoadingScreen extends ScreenAdapter implements GetScreenEnum {
     private final Label loadingPercentageLabel;
     private final AssetManager assetManager;
 
-    private ManagerScreen.Screens onScreen;
+    private ManagerScreens.Screens onScreen;
     private HorizontalGroup loadingSticksHorizontalGroup;
     private Texture textureLoadingStick;
     private static final float partX;
@@ -39,7 +39,7 @@ public class LoadingScreen extends ScreenAdapter implements GetScreenEnum {
         this.game = game;
         this.stage = game.stage;
         this.assetManager = ManagerResources.getInstance().getAssetManager();
-        onScreen = ManagerScreen.Screens.LIFE_COUNTER_SCREEN;
+        onScreen = ManagerScreens.Screens.LIFE_COUNTER_SCREEN;
         loadingSticksHorizontalGroup = new HorizontalGroup();
 
         Texture texture = new Texture(Gdx.files.internal("backgrounds/loading.png"));
@@ -97,7 +97,7 @@ public class LoadingScreen extends ScreenAdapter implements GetScreenEnum {
     public void render(float delta) {
 
         if(assetManager.update()) {
-            game.setScreen(ManagerScreen.stepOnScreen(onScreen, game));
+            game.setScreen(ManagerScreens.stepOnScreen(onScreen, game));
 
         } else {
             time+= Gdx.graphics.getDeltaTime();
@@ -118,7 +118,7 @@ public class LoadingScreen extends ScreenAdapter implements GetScreenEnum {
     }
 
     @Override
-    public ManagerScreen.Screens getScreenEnum() {
-        return ManagerScreen.Screens.LOADING_SCREEN;
+    public ManagerScreens.Screens getScreenEnum() {
+        return ManagerScreens.Screens.LOADING_SCREEN;
     }
 }

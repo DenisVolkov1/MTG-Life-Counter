@@ -1,15 +1,13 @@
 package com.mygdx.game;
 
-import static com.mygdx.game.screens.ManagerScreen.Screens.*;
+import static com.mygdx.game.screens.ManagerScreens.Screens.*;
 import com.badlogic.gdx.Game;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
-import com.mygdx.game.screens.ManagerScreen;
+import com.mygdx.game.screens.ManagerScreens;
 import com.mygdx.game.util.HistoryScreenInformation;
 import com.mygdx.game.util.SavedInformationSerializable;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,7 +65,7 @@ public class MTGLifeCounter extends Game {
 		}
 		stage = new Stage(new ScreenViewport());
 
-		this.setScreen(ManagerScreen.stepOnScreen(LOADING_SCREEN,this));
+		this.setScreen(ManagerScreens.stepOnScreen(LOADING_SCREEN,this));
 		//Gdx.input.setInputProcessor(stage);
 	}
 

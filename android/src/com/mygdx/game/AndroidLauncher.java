@@ -1,15 +1,12 @@
 package com.mygdx.game;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
-
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
-import com.mygdx.game.MTGLifeCounter;
 
 public class AndroidLauncher extends AndroidApplication {
 	@Override
@@ -26,12 +23,9 @@ public class AndroidLauncher extends AndroidApplication {
 				Intent intent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS);
 				intent.setData(Uri.parse("package:" + getPackageName()));
 				startActivity(intent);
-			} else {
-				System.out.println(Settings.System.canWrite(this));
 			}
 		}
-
-		Settings.System.putInt(getContentResolver(),
-				Settings.System.SCREEN_BRIGHTNESS, 255);
+		Settings.System.putInt(this.getContentResolver(), Settings.System.SCREEN_BRIGHTNESS_MODE, Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
+		Settings.System.putInt(this.getContentResolver(), Settings.System.SCREEN_BRIGHTNESS, 800);
 	}
 }
