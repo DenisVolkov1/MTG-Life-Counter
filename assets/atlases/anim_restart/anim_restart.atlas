@@ -1,0 +1,111 @@
+
+anim_restart.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+restart1
+  rotate: false
+  xy: 2, 1422
+  size: 555, 353
+  orig: 555, 353
+  offset: 0, 0
+  index: 3
+restart1
+  rotate: false
+  xy: 2, 1067
+  size: 555, 353
+  orig: 555, 353
+  offset: 0, 0
+  index: 8
+restart1
+  rotate: false
+  xy: 559, 1422
+  size: 555, 353
+  orig: 555, 353
+  offset: 0, 0
+  index: 13
+restart1
+  rotate: false
+  xy: 2, 712
+  size: 555, 353
+  orig: 555, 353
+  offset: 0, 0
+  index: 5
+restart1
+  rotate: false
+  xy: 559, 1067
+  size: 555, 353
+  orig: 555, 353
+  offset: 0, 0
+  index: 10
+restart1
+  rotate: false
+  xy: 1116, 1422
+  size: 555, 353
+  orig: 555, 353
+  offset: 0, 0
+  index: 2
+restart1
+  rotate: false
+  xy: 2, 357
+  size: 555, 353
+  orig: 555, 353
+  offset: 0, 0
+  index: 15
+restart1
+  rotate: false
+  xy: 559, 712
+  size: 555, 353
+  orig: 555, 353
+  offset: 0, 0
+  index: 7
+restart1
+  rotate: false
+  xy: 1116, 1067
+  size: 555, 353
+  orig: 555, 353
+  offset: 0, 0
+  index: 12
+restart1
+  rotate: false
+  xy: 2, 2
+  size: 555, 353
+  orig: 555, 353
+  offset: 0, 0
+  index: 4
+restart1
+  rotate: false
+  xy: 559, 357
+  size: 555, 353
+  orig: 555, 353
+  offset: 0, 0
+  index: 9
+restart1
+  rotate: false
+  xy: 1116, 712
+  size: 555, 353
+  orig: 555, 353
+  offset: 0, 0
+  index: 1
+restart1
+  rotate: false
+  xy: 559, 2
+  size: 555, 353
+  orig: 555, 353
+  offset: 0, 0
+  index: 14
+restart1
+  rotate: false
+  xy: 1116, 357
+  size: 555, 353
+  orig: 555, 353
+  offset: 0, 0
+  index: 6
+restart1
+  rotate: false
+  xy: 1116, 2
+  size: 555, 353
+  orig: 555, 353
+  offset: 0, 0
+  index: 11

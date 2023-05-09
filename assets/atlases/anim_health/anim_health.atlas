@@ -1,0 +1,992 @@
+
+anim_health.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+health1
+  rotate: false
+  xy: 574, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 2
+health1
+  rotate: false
+  xy: 2, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 15
+health2
+  rotate: false
+  xy: 1146, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 12
+health3
+  rotate: false
+  xy: 2, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 9
+health3
+  rotate: false
+  xy: 1146, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 1
+health4
+  rotate: false
+  xy: 1146, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 6
+health5
+  rotate: false
+  xy: 574, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 3
+health6
+  rotate: false
+  xy: 2, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 8
+health6
+  rotate: false
+  xy: 574, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 13
+health7
+  rotate: false
+  xy: 2, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 5
+health7
+  rotate: false
+  xy: 1146, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 10
+health8
+  rotate: false
+  xy: 2, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 15
+health8
+  rotate: false
+  xy: 574, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 7
+health9
+  rotate: false
+  xy: 574, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 12
+health9
+  rotate: false
+  xy: 1146, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 4
+
+anim_health2.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+health1
+  rotate: false
+  xy: 2, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 7
+health1
+  rotate: false
+  xy: 574, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 12
+health2
+  rotate: false
+  xy: 2, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 4
+health2
+  rotate: false
+  xy: 574, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 9
+health3
+  rotate: false
+  xy: 2, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 14
+health3
+  rotate: false
+  xy: 1146, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 6
+health4
+  rotate: false
+  xy: 574, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 11
+health4
+  rotate: false
+  xy: 1146, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 3
+health5
+  rotate: false
+  xy: 1146, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 8
+health5
+  rotate: false
+  xy: 1146, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 13
+health6
+  rotate: false
+  xy: 2, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 5
+health7
+  rotate: false
+  xy: 574, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 2
+health7
+  rotate: false
+  xy: 574, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 15
+health8
+  rotate: false
+  xy: 1146, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 12
+health9
+  rotate: false
+  xy: 2, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 9
+
+anim_health3.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+health1
+  rotate: false
+  xy: 2, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 4
+health2
+  rotate: false
+  xy: 1146, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 1
+health2
+  rotate: false
+  xy: 1146, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 14
+health3
+  rotate: false
+  xy: 574, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 11
+health4
+  rotate: false
+  xy: 1146, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 8
+health5
+  rotate: false
+  xy: 574, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 5
+health6
+  rotate: false
+  xy: 2, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 10
+health6
+  rotate: false
+  xy: 2, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 2
+health6
+  rotate: false
+  xy: 574, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 15
+health7
+  rotate: false
+  xy: 574, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 7
+health7
+  rotate: false
+  xy: 1146, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 12
+health8
+  rotate: false
+  xy: 2, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 4
+health9
+  rotate: false
+  xy: 2, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 1
+health9
+  rotate: false
+  xy: 574, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 14
+health9
+  rotate: false
+  xy: 1146, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 6
+
+anim_health4.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+health1
+  rotate: false
+  xy: 2, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 9
+health1
+  rotate: false
+  xy: 1146, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 1
+health1
+  rotate: false
+  xy: 1146, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 14
+health2
+  rotate: false
+  xy: 574, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 6
+health2
+  rotate: false
+  xy: 574, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 11
+health3
+  rotate: false
+  xy: 2, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 3
+health3
+  rotate: false
+  xy: 2, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 2
+health4
+  rotate: false
+  xy: 574, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 13
+health5
+  rotate: false
+  xy: 1146, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 10
+health5
+  rotate: false
+  xy: 1146, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 2
+health6
+  rotate: false
+  xy: 574, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 7
+health7
+  rotate: false
+  xy: 2, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 4
+health8
+  rotate: false
+  xy: 2, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 9
+health8
+  rotate: false
+  xy: 1146, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 1
+health8
+  rotate: false
+  xy: 2, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 14
+health9
+  rotate: false
+  xy: 574, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 11
+
+anim_health5.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+health1
+  rotate: false
+  xy: 1146, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 6
+health2
+  rotate: false
+  xy: 574, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 3
+health3
+  rotate: false
+  xy: 2, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 8
+health3
+  rotate: false
+  xy: 574, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 13
+health4
+  rotate: false
+  xy: 2, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 5
+health4
+  rotate: false
+  xy: 2, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 10
+health5
+  rotate: false
+  xy: 2, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 15
+health5
+  rotate: false
+  xy: 1146, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 7
+health6
+  rotate: false
+  xy: 574, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 12
+health6
+  rotate: false
+  xy: 574, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 4
+health7
+  rotate: false
+  xy: 2, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 9
+health7
+  rotate: false
+  xy: 1146, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 1
+health8
+  rotate: false
+  xy: 1146, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 6
+health8
+  rotate: false
+  xy: 1146, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 11
+health9
+  rotate: false
+  xy: 574, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 3
+
+anim_health6.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+health1
+  rotate: false
+  xy: 574, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 11
+health1
+  rotate: false
+  xy: 574, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 3
+health2
+  rotate: false
+  xy: 1146, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 8
+health2
+  rotate: false
+  xy: 1146, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 13
+health3
+  rotate: false
+  xy: 574, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 5
+health3
+  rotate: false
+  xy: 1146, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 10
+health4
+  rotate: false
+  xy: 2, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 2
+health4
+  rotate: false
+  xy: 574, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 15
+health5
+  rotate: false
+  xy: 2, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 12
+health6
+  rotate: false
+  xy: 2, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 9
+health7
+  rotate: false
+  xy: 2, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 14
+health7
+  rotate: false
+  xy: 1146, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 6
+health8
+  rotate: false
+  xy: 574, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 3
+health9
+  rotate: false
+  xy: 2, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 8
+health9
+  rotate: false
+  xy: 1146, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 13
+
+anim_health7.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+health1
+  rotate: false
+  xy: 574, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 8
+health2
+  rotate: false
+  xy: 1146, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 5
+health3
+  rotate: false
+  xy: 2, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 15
+health4
+  rotate: false
+  xy: 2, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 7
+health4
+  rotate: false
+  xy: 574, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 12
+health5
+  rotate: false
+  xy: 574, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 4
+health5
+  rotate: false
+  xy: 1146, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 9
+health6
+  rotate: false
+  xy: 2, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 1
+health6
+  rotate: false
+  xy: 2, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 14
+health6
+  rotate: false
+  xy: 574, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 6
+health7
+  rotate: false
+  xy: 574, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 11
+health7
+  rotate: false
+  xy: 1146, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 3
+health8
+  rotate: false
+  xy: 2, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 8
+health8
+  rotate: false
+  xy: 1146, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 13
+health9
+  rotate: false
+  xy: 1146, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 5
+
+anim_health8.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+health1
+  rotate: false
+  xy: 574, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 13
+health1
+  rotate: false
+  xy: 574, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 5
+health2
+  rotate: false
+  xy: 2, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 10
+health2
+  rotate: false
+  xy: 1146, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 2
+health2
+  rotate: false
+  xy: 1146, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 15
+health3
+  rotate: false
+  xy: 1146, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 7
+health3
+  rotate: false
+  xy: 1146, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 12
+health4
+  rotate: false
+  xy: 574, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 4
+health5
+  rotate: false
+  xy: 2, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 1
+health5
+  rotate: false
+  xy: 2, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 14
+health6
+  rotate: false
+  xy: 574, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 11
+health7
+  rotate: false
+  xy: 574, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 8
+health8
+  rotate: false
+  xy: 2, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 5
+health9
+  rotate: false
+  xy: 2, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 10
+health9
+  rotate: false
+  xy: 1146, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 2
+
+anim_health9.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+health1
+  rotate: false
+  xy: 2, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 10
+health2
+  rotate: false
+  xy: 2, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 7
+health3
+  rotate: false
+  xy: 1146, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 4
+health4
+  rotate: false
+  xy: 574, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 9
+health4
+  rotate: false
+  xy: 574, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 1
+health4
+  rotate: false
+  xy: 1146, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 14
+health5
+  rotate: false
+  xy: 2, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 6
+health5
+  rotate: false
+  xy: 574, 375
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 11
+health6
+  rotate: false
+  xy: 2, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 3
+health7
+  rotate: false
+  xy: 2, 748
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 13
+health8
+  rotate: false
+  xy: 574, 1121
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 10
+health8
+  rotate: false
+  xy: 574, 2
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 2
+health9
+  rotate: false
+  xy: 1146, 1494
+  size: 570, 371
+  orig: 570, 371
+  offset: 0, 0
+  index: 7
