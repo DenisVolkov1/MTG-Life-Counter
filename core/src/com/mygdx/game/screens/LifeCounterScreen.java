@@ -2,7 +2,7 @@ package com.mygdx.game.screens;
 
 import static com.mygdx.game.ManagerResources.*;
 import static com.mygdx.game.Players.*;
-import static com.mygdx.game.screens.ManagerScreens.Screens.*;
+import static com.mygdx.game.screens.util.ManagerScreens.Screens.*;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
@@ -16,6 +16,7 @@ import com.mygdx.game.MTGLifeCounter;
 import com.mygdx.game.MainCountPanel;
 import com.mygdx.game.ManagerResources;
 import com.mygdx.game.MenuPanelGroup;
+import com.mygdx.game.screens.util.ManagerScreens;
 
 public class LifeCounterScreen extends ScreenAdapter implements GetScreenEnum {
 
@@ -90,11 +91,6 @@ public class LifeCounterScreen extends ScreenAdapter implements GetScreenEnum {
         panelCountPlayer1.startAnimation();
         panelCountPlayer2.startAnimation();
         stage.draw();
-    }
-    @Override
-    public void hide() {
-        panelCountPlayer1.saveLife();
-        panelCountPlayer2.saveLife();
     }
 
     @Override

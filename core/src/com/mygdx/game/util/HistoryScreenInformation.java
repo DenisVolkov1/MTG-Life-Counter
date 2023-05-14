@@ -1,16 +1,8 @@
 package com.mygdx.game.util;
 
-import static java.time.LocalDateTime.now;
-
-import com.badlogic.gdx.Gdx;
 import com.mygdx.game.Players;
-
-
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.chrono.ChronoLocalDateTime;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;

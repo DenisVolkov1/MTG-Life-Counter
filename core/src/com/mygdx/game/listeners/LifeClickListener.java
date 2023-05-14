@@ -24,5 +24,6 @@ public class LifeClickListener extends ClickListener {
         hcc.setClickInitHealth(initLife);
         hcc.getPanelCountPlayer1().restartLife();
         hcc.getPanelCountPlayer2().restartLife();
+            MTGLifeCounter.saveAppInfo();
     }
 }

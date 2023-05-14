@@ -1,11 +1,11 @@
 package com.mygdx.game;
 
-import static com.mygdx.game.screens.ManagerScreens.Screens.*;
+import static com.mygdx.game.screens.util.ManagerScreens.Screens.*;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
-import com.mygdx.game.screens.ManagerScreens;
+import com.mygdx.game.screens.util.ManagerScreens;
 import com.mygdx.game.util.HistoryScreenInformation;
 import com.mygdx.game.util.SavedInformationSerializable;
 import java.util.ArrayList;
@@ -45,6 +45,8 @@ public class MTGLifeCounter extends Game {
 
 	public static void setInitialLife(InitLife init) {
 		initialLife = init.toString();
+		savedCountLifePlayer1 = init.toString();
+		savedCountLifePlayer2 = init.toString();
 	}
 
 	@Override
@@ -69,15 +71,13 @@ public class MTGLifeCounter extends Game {
 		//Gdx.input.setInputProcessor(stage);
 	}
 
-	@Override
-	public void dispose() {
-		//ManagerResources.getInstance().getAssetManager().dispose();
+	public static void saveAppInfo() {
 		SavedInformationSerializable serializable = new SavedInformationSerializable();
 		serializable.setHistoryScreenInformationList(historyScreenInformationList);
 		serializable.setSavedCountLifePlayer1(savedCountLifePlayer1);
 		serializable.setSavedCountLifePlayer2(savedCountLifePlayer2);
 		serializable.setInitialLife(initialLife);
-			SavedInformationSerializable.save(serializable);
+		SavedInformationSerializable.save(serializable);
 	}
 
 	public static void clearHistory() {

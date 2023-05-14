@@ -32,7 +32,6 @@ public class HealthChoiceContainer {
     final float partY = Gdx.graphics.getHeight()/120F;
     final float partX = Gdx.graphics.getWidth()/90F;
 
-
     public HealthChoiceContainer(final MainCountPanel panelCountPlayer1, final MainCountPanel panelCountPlayer2, InputMultiplexer inputMultiplexer, final ImageButton setInitLifeButton) {
         final Image imageBackground = new Image(ManagerResources.getInstance().getResource(BACKGROUND_HEALTH_CHOICE));
         ManagerResources.getInstance().getResource(ICON_RESTART);
@@ -49,12 +48,13 @@ public class HealthChoiceContainer {
         final TextButton b1 = new TextButton( TWENTY.toString(), textButtonStyle);
         final TextButton b2 = new TextButton( FORTY.toString(), textButtonStyle);
         final TextButton b3 = new TextButton( SIXTY.toString(), textButtonStyle);
-        final LifeClickListener clickListenerLife1 = new LifeClickListener(b1, this);
+        // ADD CLICK LISTENERS
+        LifeClickListener clickListenerLife1 = new LifeClickListener(b1, this);
         LifeClickListener clickListenerLife2 = new LifeClickListener(b2, this);
         LifeClickListener clickListenerLife3 = new LifeClickListener(b3, this);
-        b1.addListener(clickListenerLife1);
-        b2.addListener(clickListenerLife2);
-        b3.addListener(clickListenerLife3);
+            b1.addListener(clickListenerLife1);
+            b2.addListener(clickListenerLife2);
+            b3.addListener(clickListenerLife3);
 
         vg.addActor(b1);
         vg.addActor(b2);
@@ -107,7 +107,6 @@ public class HealthChoiceContainer {
     public MainCountPanel getPanelCountPlayer1() {
         return panelCountPlayer1;
     }
-
     public MainCountPanel getPanelCountPlayer2() {
         return panelCountPlayer2;
     }

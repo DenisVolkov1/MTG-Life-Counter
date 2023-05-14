@@ -26,6 +26,7 @@ public final class ManagerResources {
     public final static AssetDescriptor<Texture> BACKGROUND_HEALTH_CHOICE;
     public final static AssetDescriptor<Texture> BACKGROUND_HEALTH_CHOICE_PICK;
     public final static AssetDescriptor<Texture> MIDDLE_BAR;
+    public static final AssetDescriptor<Texture> MIDDLE_HISTORY_BAR;
 
     public final static AssetDescriptor<Texture> ICON_HISTORY;
     public final static AssetDescriptor<Texture> ICON_HISTORY_HOVER;
@@ -66,6 +67,7 @@ public final class ManagerResources {
         BACKGROUND_HEALTH_CHOICE = new AssetDescriptor<Texture>("backgrounds/healthChoice.png", Texture.class);
         BACKGROUND_HEALTH_CHOICE_PICK = new AssetDescriptor<Texture>("backgrounds/healthChoicePick.png", Texture.class);
         MIDDLE_BAR = new AssetDescriptor<Texture>("backgrounds/middleBar.png", Texture.class);
+        MIDDLE_HISTORY_BAR = new AssetDescriptor<Texture>("backgrounds/history_middleBar.png", Texture.class);
     }
     // Animation //
     static {
@@ -91,6 +93,7 @@ public final class ManagerResources {
         ASSET_MANAGER.load(BACKGROUND_HEALTH_CHOICE);
         ASSET_MANAGER.load(BACKGROUND_HEALTH_CHOICE_PICK);
         ASSET_MANAGER.load(MIDDLE_BAR);
+        ASSET_MANAGER.load(MIDDLE_HISTORY_BAR);
 
         ASSET_MANAGER.load(ICON_HISTORY);
         ASSET_MANAGER.load(ICON_HISTORY_HOVER);

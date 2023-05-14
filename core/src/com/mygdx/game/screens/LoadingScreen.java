@@ -13,6 +13,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.VerticalGroup;
 import com.mygdx.game.MTGLifeCounter;
 import com.mygdx.game.ManagerResources;
+import com.mygdx.game.screens.util.ManagerScreens;
 
 public class LoadingScreen extends ScreenAdapter implements GetScreenEnum {
 

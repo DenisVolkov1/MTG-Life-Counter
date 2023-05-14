@@ -1,7 +1,7 @@
 package com.mygdx.game;
 
 import static com.mygdx.game.ManagerResources.*;
-import static com.mygdx.game.screens.ManagerScreens.Screens.HISTORY_SCREEN;
+import static com.mygdx.game.screens.util.ManagerScreens.Screens.HISTORY_SCREEN;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
@@ -14,7 +14,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.ui.VerticalGroup;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
-import com.mygdx.game.screens.ManagerScreens;
+import com.mygdx.game.screens.util.ManagerScreens;
 
 public class MenuPanelGroup extends HorizontalGroup {
    final static float partY = Gdx.graphics.getHeight()/120F;
@@ -58,8 +58,11 @@ public class MenuPanelGroup extends HorizontalGroup {
        // HISTORY BUTTON CLICK //
        historyButton.addListener(new ClickListener() {
            public void clicked(InputEvent event, float x, float y) {
-               panelCountPlayer1.saveChangeLife();
-               panelCountPlayer2.saveChangeLife();
+               boolean saveP1 = panelCountPlayer1.saveChangeLife();
+               boolean saveP2 = panelCountPlayer2.saveChangeLife();
+               if(saveP1 || saveP2) {
+                   MTGLifeCounter.saveAppInfo();
+               }
                game.clearStage();
                game.getScreen().dispose();
                game.setScreen(ManagerScreens.stepOnScreen(HISTORY_SCREEN, game));
@@ -68,10 +71,11 @@ public class MenuPanelGroup extends HorizontalGroup {
         // RESTART LIFE BUTTON CLICK //
        restartButton.addListener(new ClickListener() {
            public void clicked(InputEvent event, float x, float y) {
-               MTGLifeCounter.setInitialLife();
-               panelCountPlayer1.restartLife();
-               panelCountPlayer2.restartLife();
-                       MTGLifeCounter.clearHistory();
+           MTGLifeCounter.setInitialLife();
+           panelCountPlayer1.restartLife();
+           panelCountPlayer2.restartLife();
+               MTGLifeCounter.clearHistory();
+                   MTGLifeCounter.saveAppInfo();
            }
        });
         // CHOICE INIT LIFE BUTTON CLICK //

@@ -51,7 +51,6 @@ public class MainCountPanel extends Group {
         thisObject = this;
         this.player = player;
 
-
         label1Style_LifeInAction = new Label.LabelStyle();
         myFont = new BitmapFont(Gdx.files.internal("BimapFont/MyBitmapFont.fnt"));
         label1Style_LifeInAction.font = myFont;
@@ -99,10 +98,10 @@ public class MainCountPanel extends Group {
         anim_minus_button.addToY(partY*3);
 
         ///ADD Listeners
+        // ADD LIFE FOR PLAYER
         buttonAddLife.addListener(new ClickListener() {
             @SuppressWarnings("SuspiciousIndentation")
             public void clicked(InputEvent event, float x, float y) {
-                //anim_health.setRunAnimation();
                 runHealthAnimation();
                 anim_add_button.setRunAnimation(thisObject.getStage());
                 changeLabelLifeInAction(PlusMinus.PLUS);
@@ -113,10 +112,10 @@ public class MainCountPanel extends Group {
 
             }
         });
+        // SUBTRACT LIFE FOR PLAYER
         buttonSubtractLife.addListener(new ClickListener() {
             @SuppressWarnings("SuspiciousIndentation")
             public void clicked(InputEvent event, float x, float y) {
-                //anim_damage.setRunAnimation();
                 runDamageAnimation();
                 anim_minus_button.setRunAnimation(thisObject.getStage());
                 changeLabelLifeInAction(PlusMinus.MINUS);
@@ -211,20 +210,24 @@ public class MainCountPanel extends Group {
             }
         }
     }
+
     private void endingAnimLabelLifeInAction() {
         saveChangeLife();
+        MTGLifeCounter.saveAppInfo();
         //
         runningAnimLabelLifeInAction=false;
         passedFromLaunch=0;
         labelLifeInAction.setText("0");
-
     }
 
-    public void saveChangeLife() {
+    public boolean saveChangeLife() {
         String changingLife = labelLifeInAction.getText().toString();
         if(!changingLife.equals("0")) {
             HistoryScreenInformation information = new HistoryScreenInformation(player, labelLifeInAction.getText().toString());
             MTGLifeCounter.historyScreenInformationList.add(information);
+            return true;
+        } else {
+            return false;
         }
     }
 
@@ -240,10 +243,10 @@ public class MainCountPanel extends Group {
             if (fontScalePlus >= 1.1F) {
                 fontScalePlus = 1F;
                 isScalePlus = false;
-                label1Style_Life.fontColor = Util.CONSTANT_COLOR;
+                label1Style_Life.fontColor = Util.Colors.CONSTANT_COLOR;
             } else {
                 fontScalePlus += 0.018F;
-                label1Style_Life.fontColor = Util.PLUS_COLOR;
+                label1Style_Life.fontColor = Util.Colors.PLUS_COLOR;
             }
             labelLife.setFontScale(fontScalePlus, fontScalePlus);
         }
@@ -251,10 +254,10 @@ public class MainCountPanel extends Group {
             if (fontScaleMinus <= 0.9F) {
                 fontScaleMinus = 1F;
                 isScaleMinus =false;
-                label1Style_Life.fontColor = Util.CONSTANT_COLOR;
+                label1Style_Life.fontColor = Util.Colors.CONSTANT_COLOR;
             } else {
                 fontScaleMinus -= 0.018F;
-                label1Style_Life.fontColor = Util.MINUS_COLOR;
+                label1Style_Life.fontColor = Util.Colors.MINUS_COLOR;
             }
             labelLife.setFontScale(fontScaleMinus, fontScaleMinus);
         }
@@ -291,13 +294,17 @@ public class MainCountPanel extends Group {
                 break;
             case PLAYER_2: MTGLifeCounter.savedCountLifePlayer2 = String.valueOf(labelLife.getText());
                 break;
+            default:
+                throw new IllegalStateException("Unexpected Enum com.mygdx.game.Players value: " + player);
         }
     }
+
     public String getLiveCount() {
         switch (player) {
             case PLAYER_1: return MTGLifeCounter.savedCountLifePlayer1;
             case PLAYER_2: return MTGLifeCounter.savedCountLifePlayer2;
-            default: return MTGLifeCounter.getInitialLife().toString();
+            default:
+                throw new IllegalStateException("Unexpected Enum com.mygdx.game.Players value: " + player);
         }
     }
 

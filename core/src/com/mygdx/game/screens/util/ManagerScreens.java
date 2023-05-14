@@ -1,9 +1,12 @@
-package com.mygdx.game.screens;
+package com.mygdx.game.screens.util;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.mygdx.game.MTGLifeCounter;
+import com.mygdx.game.screens.HistoryScreen;
+import com.mygdx.game.screens.LifeCounterScreen;
+import com.mygdx.game.screens.LoadingScreen;
 
 public class ManagerScreens {
 
